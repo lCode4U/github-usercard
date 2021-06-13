@@ -1,9 +1,16 @@
+import axios from 'axios';
+
 /*
   STEP 1: using axios, send a GET request to the following URL
     (replacing the placeholder with your Github name):
     https://api.github.com/users/<your name>
 */
+const gitRequest = axios.get('https://api.github.com/users/ICode4U');
+console.log(gitRequest);
 
+gitrequest.then((gitrequest) => {
+  const gitData = gitrequest.data;
+})
 /*
   STEP 2: Inspect and study the data coming back, this is YOUR
     github info! You will need to understand the structure of this
