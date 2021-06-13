@@ -1,16 +1,15 @@
-import axios from 'axios';
-import react from 'react';
-import { render } from 'react-dom';
+import axios from 'axios'
+import { render } from 'react-dom'
 
 /*
   STEP 1: using axios, send a GET request to the following URL
     (replacing the placeholder with your Github name):
     https://api.github.com/users/<your name>
 */
-const gitRequest = axios.get('https://api.github.com/users/ICode4U');
+const gitRequest = axios.get('https://api.github.com/users/ICode4U')
 console.log(gitRequest);
 gitRequest.then(gitRequest => {
-  console.log(gitRequest.data);
+  console.log(gitRequest.data)
 });
 
 
@@ -78,11 +77,11 @@ function GitComponent(props) {
   </div>
   )
 }
+// 
 render(
-  <GitComponent/>     //gitImage='' userName=''   screenName=''  userLocation='' githubAdd='' githubPage='' usersFollowers='' userFollowings='' usersBio=''  />
+  <GitComponent  gitImage={gitRequest[1][0]} />userName=''   screenName=''  userLocation='' githubAdd='' githubPage='' usersFollowers='' userFollowings='' usersBio=''  />
   ,document.querySelector('.cards')
 )
-
 /*
   List of LS Instructors Github username's:
     tetondan
