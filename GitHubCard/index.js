@@ -1,4 +1,6 @@
 import axios from 'axios';
+import react from 'react';
+import { render } from 'react-dom';
 
 /*
   STEP 1: using axios, send a GET request to the following URL
@@ -7,10 +9,12 @@ import axios from 'axios';
 */
 const gitRequest = axios.get('https://api.github.com/users/ICode4U');
 console.log(gitRequest);
+gitRequest.then(gitRequest => {
+  console.log(gitRequest.data);
+});
 
-gitrequest.then((gitrequest) => {
-  const gitData = gitrequest.data;
-})
+
+gitRequest.catch(gitProblem => console.log(gitProblem))
 /*
   STEP 2: Inspect and study the data coming back, this is YOUR
     github info! You will need to understand the structure of this
@@ -56,6 +60,28 @@ const followersArray = [];
       </div>
     </div>
 */
+function GitComponent(props) {
+  return (
+    <div className="card">
+    <img src={props.gitImage} />
+    <div className="card-info">
+      <h3 className="name">{props.userName}</h3>
+      <p className="username">{props.screenName}</p>
+      <p>Location: {props.usersLocation}</p>
+      <p>Profile:
+        <a href={props.githubAdd}>{props.githubPage}</a>
+      </p>
+      <p>Followers: {props.usersFollowers}</p>
+      <p>Following: {props.usersFollowing}</p>
+      <p>Bio: {props.usersBio}</p>
+    </div>
+  </div>
+  )
+}
+render(
+  <GitComponent/>     //gitImage='' userName=''   screenName=''  userLocation='' githubAdd='' githubPage='' usersFollowers='' userFollowings='' usersBio=''  />
+  ,document.querySelector('.cards')
+)
 
 /*
   List of LS Instructors Github username's:
