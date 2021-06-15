@@ -79,7 +79,7 @@ function GitComponent(props) {
 }
 // 
 render(
-  <GitComponent  gitImage={gitRequest[1][0]} />userName=''   screenName=''  userLocation='' githubAdd='' githubPage='' usersFollowers='' userFollowings='' usersBio=''  />
+  <GitComponent  gitImage={gitRequest[1][0]} userName=''   screenName=''  userLocation='' githubAdd='' githubPage='' usersFollowers='' userFollowings='' usersBio=''  />
   ,document.querySelector('.cards')
 )
 /*

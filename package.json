@@ -17,11 +17,14 @@
   "homepage": "https://github.com/LambdaSchool/github-usercard#readme",
   "devDependencies": {
     "eslint": "^7.3.0",
-    "parcel-bundler": "^1.12.4"
+    "parcel": "^1.12.4",
+    "parcel-bundler": "^1.10.3"
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "core-js": "^2.6.12",
     "npm": "^7.17.0",
+    "package-lock.json": "^1.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }
