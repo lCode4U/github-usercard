@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { useState } from 'react';
 import { render } from 'react-dom'
 
 /*
@@ -6,14 +7,27 @@ import { render } from 'react-dom'
     (replacing the placeholder with your Github name):
     https://api.github.com/users/<your name>
 */
-const gitRequest = axios.get('https://api.github.com/users/ICode4U')
-console.log(gitRequest);
-gitRequest.then(gitRequest => {
-  console.log(gitRequest.data)
-});
+// const gitHubData = fetch("https://api.github.com/users/ICode4U");
+// console.log(gitHubData);
+// gitHubData.then(Response => console.log(Response));
+// gitHubData.catch(error => console.log(error));
+// gitHubData.finally(() =>  {
+//   const userData = useState(gitHubData);
+//   console.log(userData);
+// }); 
 
 
-gitRequest.catch(gitProblem => console.log(gitProblem))
+
+const gitRequest = axios.get('https://api.github.com/users/ICode4U');
+
+
+
+  gitRequest.then(gitRequest => {
+    console.log(gitRequest.data);
+  });
+  gitRequest.catch(gitProblem => console.log(gitProblem));
+
+
 /*
   STEP 2: Inspect and study the data coming back, this is YOUR
     github info! You will need to understand the structure of this
@@ -79,7 +93,7 @@ function GitComponent(props) {
 }
 // 
 render(
-  <GitComponent  gitImage={gitRequest[1][0]} userName=''   screenName=''  userLocation='' githubAdd='' githubPage='' usersFollowers='' userFollowings='' usersBio=''  />
+  <GitComponent  gitImage='' userName=''   screenName=''  userLocation='' githubAdd='' githubPage='' usersFollowers='' userFollowings='' usersBio=''/>
   ,document.querySelector('.cards')
 )
 /*
