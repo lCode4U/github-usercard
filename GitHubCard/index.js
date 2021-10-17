@@ -1,6 +1,5 @@
-import axios from 'axios'
-import { useState } from 'react';
-import { render } from 'react-dom'
+import axios from 'axios';
+import { render } from 'react-dom';
 
 /*
   STEP 1: using axios, send a GET request to the following URL
@@ -94,7 +93,7 @@ function GitComponent(props) {
 // 
 render(
   <GitComponent  gitImage='' userName=''   screenName=''  userLocation='' githubAdd='' githubPage='' usersFollowers='' userFollowings='' usersBio=''/>
-  ,document.querySelector('.cards')
+  , document.querySelector('.cards')
 )
 /*
   List of LS Instructors Github username's:
