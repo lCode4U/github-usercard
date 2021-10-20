@@ -1,5 +1,4 @@
-import axios from 'axios';
-import { render } from 'react-dom';
+import axios from ".. /node_modules/axios";
 
 /*
   STEP 1: using axios, send a GET request to the following URL
@@ -72,29 +71,29 @@ const followersArray = [];
       </div>
     </div>
 */
-function GitComponent(props) {
-  return (
-    <div className="card">
-    <img src={props.gitImage} />
-    <div className="card-info">
-      <h3 className="name">{props.userName}</h3>
-      <p className="username">{props.screenName}</p>
-      <p>Location: {props.usersLocation}</p>
-      <p>Profile:
-        <a href={props.githubAdd}>{props.githubPage}</a>
-      </p>
-      <p>Followers: {props.usersFollowers}</p>
-      <p>Following: {props.usersFollowing}</p>
-      <p>Bio: {props.usersBio}</p>
-    </div>
-  </div>
-  )
-}
+// function GitComponent(props) {
+//   return (
+//     <div className="card">
+//     <img src={props.gitImage} />
+//     <div className="card-info">
+//       <h3 className="name">{props.userName}</h3>
+//       <p className="username">{props.screenName}</p>
+//       <p>Location: {props.usersLocation}</p>
+//       <p>Profile:
+//         <a href={props.githubAdd}>{props.githubPage}</a>
+//       </p>
+//       <p>Followers: {props.usersFollowers}</p>
+//       <p>Following: {props.usersFollowing}</p>
+//       <p>Bio: {props.usersBio}</p>
+//     </div>
+//   </div>
+//   )
+// }
 // 
-render(
-  <GitComponent  gitImage='' userName=''   screenName=''  userLocation='' githubAdd='' githubPage='' usersFollowers='' userFollowings='' usersBio=''/>
-  , document.querySelector('.cards')
-)
+// render(
+//   <GitComponent  gitImage='' userName=''   screenName=''  userLocation='' githubAdd='' githubPage='' usersFollowers='' userFollowings='' usersBio=''/>
+//   , document.querySelector('.cards')
+// )
 /*
   List of LS Instructors Github username's:
     tetondan
