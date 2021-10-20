@@ -1,4 +1,4 @@
-import axios from ".. /node_modules/axios";
+import axios from 'axios';
 
 /*
   STEP 1: using axios, send a GET request to the following URL
