@@ -16,8 +16,20 @@
   },
   "homepage": "https://github.com/LambdaSchool/github-usercard#readme",
   "devDependencies": {
+<<<<<<< HEAD
     "eslint": "^7.32.0",
+=======
+    "eslint": "^8.0.1",
+>>>>>>> 3e141d6bfe4d83d6046b677f1ab81dcf46439701
     "parcel-bundler": "^1.12.5"
   },
-  "dependencies": {}
+  "dependencies": {
+<<<<<<< Updated upstream
+    "axios": "^0.23.0"
+=======
+    "axios": "^0.21.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+>>>>>>> Stashed changes
+  }
 }
